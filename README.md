@@ -10,3 +10,14 @@ Lista in care se regasesc totalitatea notelor de jurnal le va prezenta sub forma
 
 Baza de date relationala utilizata in dezvoltarea aplicatiei va contine atat inregistrarile de autentificare ale utilizatorului (nume user, parola), cat si informatiile adaugate de fiecare user in parte( nume nota, data nota, continut). Acestea va putea fi actualizata de fiecare data cand se va realiza o actualizare in aplicatie.
 
+In cadrul etapei de adaugare/modificare nota:
+-pentru componenta data nota(label) se va face selectia dintr-un calendar;
+-pentru componenta nume nota(label) vom avea un text field;
+-pentru componenta continut(label) vom avea un text field multi line;
+-buton adaugare nota pentru actualizare lista si salvare in baza de date;
+
+Partea de traducere va fi tratata separat:
+-se va realiza traducerea intr-un text field separat prin utilizarea butonului traducere;
+-in cazul in care se doreste adaugarea acesteia in baza de date, va trebui sa se salveze nota continand informatia tradusa.
+
+
