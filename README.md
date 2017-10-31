@@ -39,9 +39,9 @@ Identify API calls:
 -POST/translated_text
 
 Define user action:
--vizualizare lista
--adaugare nota
--actualizare nota
--traducere nota
+-vizualizare lista;
+-adaugare nota;
+-actualizare nota;
+-traducere nota;
 
 
