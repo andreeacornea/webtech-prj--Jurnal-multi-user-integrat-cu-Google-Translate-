@@ -26,5 +26,22 @@ Interactiunea utilizatorului cu aplicatia:
 -dupa autentificare, acesta va ajunge in Lista note, unde poate vizualiza notele de jurnal adaugate pana acum;
 -acesta va putea oscila intre tab-ul Lista note si Adauga nota in functie de scopul utilizarii aplicatiei in acel moment;
 -pentru adaugarea unei noi note de jurnal, se vor completa campurile necesare (+ campuri optionale pentru traducere in cazul in care se doreste) si se va salva in lista si in baza de date prin intermediul butonului Salveaza nota;
--utilizatorul va putea selecta o nota pe care vrea sa o vizualizeze/actualizeze/traduca; acesta va fi redirectionat in sectiunea Adauga nota, unde se vor completa automat campurile data, titlu si continut; pentru a modifica si actualiza nota de jurnal, aceasta va fi salvata cu ajutorul butonului Actualizeaza nota si se vor face actualizarile in baza de date;
+-utilizatorul va putea selecta o nota pe care vrea sa o vizualizeze/actualizeze/traduca; acesta va fi redirectionat in sectiunea Adauga nota, unde se vor completa automat campurile data, titlu si continut; pentru a modifica si actualiza nota de jurnal, aceasta va fi salvata cu ajutorul butonului Actualizeaza nota si se vor face actualizarile in baza de date;              
+ 
+Identify components:
+-butoane pentru autentificare, salvare, actualizare,traducere;
+-lista cu note de jurnal ale utilizatorului;
+-calendar pentru selectie data;
+-text field-uri pentru continut;
+
+Identify API calls:
+-GET/language
+-POST/translated_text
+
+Define user action:
+-vizualizare lista
+-adaugare nota
+-actualizare nota
+-traducere nota
+
 
