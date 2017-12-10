@@ -1,0 +1,30 @@
+{
+  "name": "restful_api",
+  "version": "1.0.0",
+  "description": "backend for app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreeacornea/webtech-prj--Jurnal-multi-user-integrat-cu-Google-Translate-.git"
+  },
+  "author": "andreeac",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreeacornea/webtech-prj--Jurnal-multi-user-integrat-cu-Google-Translate-/issues"
+  },
+  "homepage": "https://github.com/andreeacornea/webtech-prj--Jurnal-multi-user-integrat-cu-Google-Translate-#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "css": "^2.2.1",
+    "express": "^4.16.2",
+    "jquery": "^3.2.1",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.1",
+    "nodeadmin": "^0.1.2",
+    "sequelize": "^4.27.0"
+  }
+}
