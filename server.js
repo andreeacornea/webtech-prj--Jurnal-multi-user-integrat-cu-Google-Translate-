@@ -2,7 +2,7 @@ var express = require("express")
 var Sequelize = require("sequelize")
 var nodeadmin = require("nodeadmin")
 var cors = require("cors");
-
+var translated = require("google-translate-api");
 
 //connect to mysql database
 var sequelize = new Sequelize({
@@ -47,6 +47,16 @@ app.use(express.json())                       // to support JSON-encoded bodies
 app.use(express.urlencoded({extended: true})) // to support URL-encoded bodies
 app.use(cors())
 
+app.get('/traducere', function(request, response) {
+    
+    //console.log(request.query.val)
+    translated(request.query.val, {from: 'ro', to:'en'}).then(res => {
+        response.status(200).send(res.text);
+    });
+    
+    
+})
+
 app.get('/', function(request, response) {
     Notes.findAll(
         {
@@ -71,6 +81,7 @@ app.get('/lists', function(request, response) {
         
 })
 
+
 // get one category by id
 app.get('/lists/:id', function(request, response) {
     Lists.findOne({where: {id:request.params.id}}).then(function(list) {
@@ -79,6 +90,13 @@ app.get('/lists/:id', function(request, response) {
         } else {
             response.status(404).send()
         }
+    })
+})
+
+
+app.get('/lists/:id/denumire', function(request, response) {
+    Lists.findOne({where: {id:request.params.id}}).then(function(list) {
+            response.status(200).send(list.name)
     })
 })
 
@@ -131,6 +149,23 @@ app.get('/notes/:id', function(request, response) {
         )
 })
 
+app.get('/notes/:id/description', function(request, response) {
+    Notes.findById(request.params.id).then(
+            function(note) {
+                response.status(200).send(note.description)
+            }
+        )
+})
+
+app.get('/notes/:id/date', function(request, response) {
+    Notes.findById(request.params.id).then(
+            function(note) { 
+                response.status(200).send(note.day)
+            }
+        )
+})
+
+
 app.post('/notes', function(request, response) {
     Notes.create(request.body, {fields : ['list_id', 'day', 'description']}).then(function(note) {
         response.status(201).send(note)
@@ -172,9 +207,9 @@ app.get('/lists/:id/notes', function(request, response) {
         }).then(
             function(notes) {
                 response.status(200).send(notes)
+                
             }
         )
 })
 
 app.listen(8080)
-

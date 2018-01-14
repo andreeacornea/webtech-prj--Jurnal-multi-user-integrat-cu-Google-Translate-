@@ -1,0 +1,39 @@
+$ mysql-ctl start
+$ mysql -u root
+ source ~/workspace/sql/jurnal.sql
+ 
+
+insert into lists(name) values ('Lista de cumparaturi');
+insert into notes(list_id,day,description) values('1','12/12/2017','Conserve, legume, fructe');
+
+insert into lists(name) values ('Locuri de vizitat');
+insert into notes(list_id,day,description) values('2','20/12/2017','Mara Mura, Acuarela, Chocolat, Linea');
+
+insert into lists(name) values ('Carti de citit ');
+insert into notes(list_id,day,description) values('3','08/12/2017','Mizerabilii, Urzeala Tronurilor, Ultimul don');
+
+insert into lists(name) values ('Filme de vizionat');
+insert into notes(list_id,day,description) values('4','05/01/2018','Titanic, Troia');
+
+insert into lists(name) values ('Limbaje de programare');
+insert into notes(list_id,day,description) values('5','09/01/2018','Javascript, Java, C#');
+
+insert into lists(name) values ('Proiecte');
+insert into notes(list_id,day,description) values('6','09/01/2018',' Multimedia, Tehnologii Web, Android');
+
+insert into lists(name) values ('Branduri');
+insert into notes(list_id,day,description) values('7','03/05/2017','H&M, Zara, Bershka, Stradivarius');
+
+select a.id, a.name,b.id, b.list_id, b.day, b.description from lists a left join notes b on a.id=b.list_id;
+
++----+-----------------------+------+---------+------------+----------------------------------------------+
+| id | name                  | id   | list_id | day        | description                                  |
++----+-----------------------+------+---------+------------+----------------------------------------------+
+|  1 | Lista de cumparaturi  |    1 |       1 | 12/12/2017 | Conserve, legume, fructe                     |
+|  2 | Locuri de vizitat     |    2 |       2 | 20/12/2017 | Mara Mura, Acuarela, Chocolat, Linea         |
+|  3 | Carti de citit        |    3 |       3 | 08/12/2017 | Mizerabilii, Urzeala Tronurilor, Ultimul don |
+|  4 | Filme de vizionat     |    4 |       4 | 05/01/2018 | Titanic, Troia                               |
+|  5 | Limbaje de programare |    5 |       5 | 09/01/2018 | Javascript, Java, C#                         |
+|  6 | Proiecte              |    6 |       6 | 09/01/2018 |  Multimedia, Tehnologii Web, Android         |
+|  7 | Branduri              |    7 |       7 | 03/05/2017 | H&M, Zara, Bershka, Stradivarius             |
++----+-----------------------+------+---------+------------+----------------------------------------------+

@@ -1,0 +1,84 @@
+.App {
+  margin:5px;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 60px;
+  text-align: right;
+}
+
+.App-header {
+  background-color:#1A237E;
+  height: 50px;
+  padding: 10px;
+  color: white;
+  text-align: left;
+}
+
+.App-title {
+  font-size: 1.5em;
+  text-align: left;
+  margin-left: 50px;
+}
+
+.App-intro {
+  font-size: large;
+  text-align: left;
+  margin-top: 70px;
+
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.addButton 
+{
+  float:  left;
+  margin-top: 18%;
+  margin-right: 55px;
+  margin-left:5px;
+}
+
+.paper {
+  margin-top: 70px;
+  height:300px;
+  border-color: inherit ;
+  color: #81DEFF;
+  width: 100%;
+}
+
+.paper2 {
+  margin-top: 60px;
+  height:300px;
+  border-color: inherit;
+  color: #81DEFF;
+  width: 100%;
+}
+
+.textfield{
+    padding-left:20px;
+
+}
+
+.translate{
+   float:  right;
+  margin-top: 19%;
+  margin-left: 60px;
+
+}
+
+.sectiuneStanga{
+  width: 46%;
+  float: left;
+}
+
+.sectiuneDreapta{
+  width: 50%;
+  float: right;
+  margin-bottom: 2%;
+}
+
+

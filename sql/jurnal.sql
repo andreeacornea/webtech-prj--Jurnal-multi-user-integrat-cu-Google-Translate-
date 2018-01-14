@@ -21,7 +21,7 @@ USE `jurnal`;
 CREATE TABLE IF NOT EXISTS `lists` (
   `id` smallint(5) NOT NULL AUTO_INCREMENT,
   `name` varchar(30) DEFAULT NULL,
-  `language` varchar(100) DEFAULT NULL,
+  `language` varchar(100) DEFAULT "romana",
   `createdAt` timestamp,
   `updatedAt` timestamp,
   PRIMARY KEY (`id`),
